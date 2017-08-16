@@ -19,7 +19,7 @@ config.JobType.scriptExe = './lfv_LHEGENSIMsubmissionScript.sh'
 #config.JobType.scriptExe = '../../kappaWorkflow_privateMiniAOD_AODSIM.sh'
 #config.JobType.outputFiles = ['LHETuple.root']
 
-config.Data.outputPrimaryDataset = 'LFV_ZToL1L2_13TeV_madgraph_pythia8_stk2'
+config.Data.outputPrimaryDataset = 'LFV_ZToL1L2_13TeV_madgraph_pythia8_stk1'
 config.Data.splitting = 'EventBased'
 config.Data.unitsPerJob = 1000
 #NJOBS = 10  # This is not a configuration parameter, but an auxiliary variable that we use in the next line.
@@ -29,6 +29,6 @@ config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
 #config.Data.publication = False
 config.Data.publication = True
 config.Data.publishDBS = 'phys03'
-config.Data.outputDatasetTag = 'RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_stk2'
+config.Data.outputDatasetTag = 'RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016_stk1'
 
 config.Site.storageSite = "T2_DE_RWTH"
