@@ -26,8 +26,8 @@ config.Data.unitsPerJob = 10
 config.Data.totalUnits = #NUMBEREVENTS#
 #config.Data.totalUnits = config.Data.unitsPerJob * NJOBS
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
-#config.Data.publication = False
-config.Data.publication = True
+config.Data.publication = False
+#config.Data.publication = True
 config.Data.publishDBS = 'phys03'
 config.Data.outputDatasetTag = 'RunIISummer16MiniAODv2-PUMoriond17_80X_mcRun2_asymptotic_2016'
 
