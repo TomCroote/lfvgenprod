@@ -109,7 +109,11 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
     )
 )
 
-
+# Set different random numbers seeds every time one runs cmsRun
+from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper
+randSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)
+randSvc.populate()
+	
 # Path and EndPath definitions
 process.generation_step = cms.Path(process.pgen)
 process.simulation_step = cms.Path(process.psim)
