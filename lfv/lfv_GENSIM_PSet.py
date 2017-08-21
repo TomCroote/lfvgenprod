@@ -4,6 +4,7 @@
 # Source: /local/reps/CMSSW/CMSSW/Configuration/Applications/python/ConfigBuilder.py,v 
 # with command line options: Configuration/GenProduction/python/getfragment.py --filein dbs:/store/user/croote/MinBias/CRAB3_tutorial_May2015_MC_analysis_3_winputfiles/170512_095806/0000/LHE_1.root --fileout file:GENSIM.root --mc --eventcontent RAWSIM --customise SLHCUpgradeSimulations/Configuration/postLS1Customs.customisePostLS1,Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --conditions MCRUN2_71_V1::All --beamspot Realistic50ns13TeVCollision --step GEN,SIM --magField 38T_PostLS1 --python_filename GENSIM.py --no_exec -n 100
 import FWCore.ParameterSet.Config as cms
+import os,random
 
 process = cms.Process('SIM')
 
@@ -110,9 +111,8 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
 )
 
 # Set different random numbers seeds every time one runs cmsRun
-from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper
-randSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)
-randSvc.populate()
+random.seed = os.urandom(10) #~10^14
+process.RandomNumberGeneratorService.generator.initialSeed = random.randint(0,999999)
 	
 # Path and EndPath definitions
 process.generation_step = cms.Path(process.pgen)
