@@ -114,6 +114,15 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
 random.seed = os.urandom(10) #~10^14
 process.RandomNumberGeneratorService.generator.initialSeed = random.randint(0,999999)
 	
+# Random number
+
+process.RandomNumberGeneratorService =
+cms.Service("RandomNumberGeneratorService",
+  generator = cms.PSet(initialSeed = cms.untracked.uint32(random.randint(0,99999))),
+  VtxSmeared = cms.PSet(initialSeed = cms.untracked.uint32(random.randint(0,99999))),
+  g4SimHits =  cms.PSet(initialSeed = cms.untracked.uint32(random.randint(0,99999)))
+)
+	
 # Path and EndPath definitions
 process.generation_step = cms.Path(process.pgen)
 process.simulation_step = cms.Path(process.psim)
