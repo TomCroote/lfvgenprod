@@ -66,7 +66,9 @@ process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
     args = cms.vstring('#GRIDPACKLOCATION#')
 )
 
-
+# Random seed
+process.RandomNumberGeneratorService.externalLHEProducer.initialSeed = random.randint(0,999999)                                             
+                                             
 # Path and EndPath definitions
 process.lhe_step = cms.Path(process.externalLHEProducer)
 process.endjob_step = cms.EndPath(process.endOfProcess)
