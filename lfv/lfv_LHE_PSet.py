@@ -7,6 +7,7 @@
 print "LHE OPEN"
 
 import FWCore.ParameterSet.Config as cms
+import os,random
 
 process = cms.Process('LHE')
 
@@ -67,6 +68,7 @@ process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
 )
 
 # Random seed
+random.seed = os.urandom(10) #~10^14
 process.RandomNumberGeneratorService.externalLHEProducer.initialSeed = random.randint(0,999999)                                             
                                              
 # Path and EndPath definitions
