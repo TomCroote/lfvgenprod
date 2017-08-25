@@ -116,8 +116,7 @@ process.RandomNumberGeneratorService.generator.initialSeed = random.randint(0,99
 	
 # Random number
 
-process.RandomNumberGeneratorService =
-cms.Service("RandomNumberGeneratorService",
+process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService",
   generator = cms.PSet(initialSeed = cms.untracked.uint32(random.randint(0,99999))),
   VtxSmeared = cms.PSet(initialSeed = cms.untracked.uint32(random.randint(0,99999))),
   g4SimHits =  cms.PSet(initialSeed = cms.untracked.uint32(random.randint(0,99999)))
