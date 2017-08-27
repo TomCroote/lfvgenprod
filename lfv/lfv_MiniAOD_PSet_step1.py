@@ -88,7 +88,7 @@ process.mixData.input.fileNames = cms.untracked.vstring([
     '/store/mc/RunIISpring15PrePremix/Neutrino_E-10_gun/GEN-SIM-DIGI-RAW/PUMoriond17_80X_mcRun2_asymptotic_2016_TrancheIV_v2-v2/90006/8EF6B8E2-9282-E611-B993-02163E0176A3.root'
     ])
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '80X_mcRun2_asymptotic_2016_TrancheIV_v6', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '80X_mcRun1_2017_CrooteLFV_v1', '')
 
 # Path and EndPath definitions
 process.digitisation_step = cms.Path(process.pdigi)
