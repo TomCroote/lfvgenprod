@@ -111,10 +111,6 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
 )
 
 # Set different random numbers seeds every time one runs cmsRun
-random.seed = os.urandom(10) #~10^14
-process.RandomNumberGeneratorService.generator.initialSeed = random.randint(0,999999)
-	
-# Set different random numbers seeds every time one runs cmsRun
 from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper
 randSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)
 randSvc.populate()
