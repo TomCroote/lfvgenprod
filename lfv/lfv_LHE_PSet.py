@@ -68,9 +68,9 @@ process.externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
 )
 
 # Set different random numbers seeds every time one runs cmsRun
-from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper
-randSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)
-randSvc.populate()                                            
+#from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper
+#randSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)
+#randSvc.populate()                                            
                                              
 # Path and EndPath definitions
 process.lhe_step = cms.Path(process.externalLHEProducer)
