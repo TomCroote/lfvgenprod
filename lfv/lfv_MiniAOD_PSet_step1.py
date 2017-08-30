@@ -32,7 +32,7 @@ process.maxEvents = cms.untracked.PSet(
 
 # Input source
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('/store/user/croote/LFV_ZToL1L2_13TeV_madgraph_pythia8/CRAB3_tutorial_May2015_MC_analysis_3_winputfiles/170724_210402/0000/GENSIM_10.root'),
+    fileNames = cms.untracked.vstring('#GENSIMLOCATION#'),
     secondaryFileNames = cms.untracked.vstring()
 )
 
