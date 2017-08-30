@@ -30,12 +30,10 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(#NUMBEREVENTS#)
 )
 
+# Input source
 process.source = cms.Source("PoolSource",
-    secondaryFileNames = cms.untracked.vstring(),
     fileNames = cms.untracked.vstring('#GENSIMLOCATION#'),
-    inputCommands = cms.untracked.vstring('keep *', 
-        'drop LHEXMLStringProduct_*_*_*'),
-    dropDescendantsOfDroppedBranches = cms.untracked.bool(False)
+    secondaryFileNames = cms.untracked.vstring()
 )
 
 process.options = cms.untracked.PSet(
