@@ -29,6 +29,6 @@ config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromSiteDB())
 #config.Data.publication = False
 config.Data.publication = True
 config.Data.publishDBS = 'phys03'
-config.Data.outputDatasetTag = 'RunIISummer16MiniAODv2-Croote17_80X_mcRun2_asymptotic_13_09_2017_set7'
+config.Data.outputDatasetTag = 'RunIISummer16MiniAODv2-Croote17_80X_mcRun2_asymptotic_13_09_2017_set8'
 
 config.Site.storageSite = "T2_DE_RWTH"
